@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+  before_action :logger_in_user, only:[:edit,:update,:destroy]
   def index
     @tasks = Task.all #　やることリストの一覧取得
   end
