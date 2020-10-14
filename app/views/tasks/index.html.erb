@@ -1,11 +1,8 @@
-<h1>タスク一覧</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>タスク名</th>
-      </tr>
 
-    </thead>
+<h1>タスク一覧</h1>
+<div class="container">
+  <table>
+    <h2>タスク名</h2>
     <tbody>
     <!-- 以下のコードでControllerから受け取ったタスク一覧を表示 -->
       <% @tasks.each do |task| %>
@@ -17,4 +14,5 @@
       <% end %>
     </tbody>
   </table>
-<%= link_to '追加', new_task_path %>
+<%= link_to '追加', new_task_path , class: "btn btn-lg btn-primary"%>
+</div>
